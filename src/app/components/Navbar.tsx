@@ -12,13 +12,15 @@ function Navbar() {
 
   return (
     <nav>
-        <div className='pl-6 pr-6 p-3 flex justify-between items-center bg-[#85A98F]'>
-            
-        <div className='text-3xl font-bold text-white'>
-<Image src="/images/ew-logo.png" alt="logo" height={100} width={100}
-className='w-[150px] h-[100px]'/>
-
-</div>
+        <div className='pl-6 p-3 flex justify-between items-center bg-[#85A98F]'>
+            {
+                isMenuOpen ? "" : <div className='text-3xl font-bold text-white'>
+                <Image src="/images/burger-logo-.png" alt="logo" height={80} width={80}
+                className='w-[80px] h-[80px] md:w-[110px] '/>
+                
+                </div>
+            }
+      
 
 {/* desktop Navbar */}
 <div>
@@ -47,7 +49,7 @@ className='w-[150px] h-[100px]'/>
 </div>
 
 {isMenuOpen &&
-<ul className='flex flex-col items-center md:hidden rounded-lg  text-white text-2xl h-auto max-w-screen-lg p-6 gap-5 mx-14'>
+<ul className='flex flex-col mx-auto items-center md:hidden rounded-lg  text-white text-2xl h-auto max-w-full p-6 gap-5 '>
     <li>
     <NavbarLinks href='/home' title='Home'/> </li>
    <li> <NavbarLinks href='/about' title='About'/> </li>
